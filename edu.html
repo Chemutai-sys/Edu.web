@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Student Revision Hub</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: radial-gradient(circle, #f9c5d1 0%, #fbc2eb 100%);
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background: linear-gradient(90deg, #2193b0, #6dd5ed);
+      color: white;
+      padding: 2rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.19);
+    }
+    .motivation {
+      margin: 1rem auto 0.5rem auto;
+      max-width: 700px;
+      background: linear-gradient(90deg, #f7971e 0%, #ffd200 100%);
+      color: #2193b0;
+      text-align: center;
+      font-size: 1.25rem;
+      font-weight: bold;
+      border-radius: 8px;
+      padding: 1rem;
+      box-shadow: 0 2px 12px #ffd20055;
+      letter-spacing: 1px;
+    }
+    section {
+      margin: 2rem auto;
+      max-width: 900px;
+      background: #fffaf3;
+      border-radius: 14px;
+      box-shadow: 0 6px 20px rgba(251, 194, 235, 0.15);
+      padding: 2rem;
+    }
+    h2, h3 {
+      margin-top: 0;
+      color: #ed7e7c;
+    }
+    h3 {
+      color: #2193b0;
+    }
+    .unit-card {
+      border-radius:10px;
+      padding:1.2rem;
+      margin-bottom:1rem;
+      box-shadow: 0 2px 6px rgba(166,193,238,0.12);
+    }
+    .unit-card:nth-child(1) { background: linear-gradient(90deg,#fbc2eb,#a6c1ee);}
+    .unit-card:nth-child(2) { background: linear-gradient(90deg,#b2fefa,#f6d365);}
+    .unit-card:nth-child(3) { background: linear-gradient(90deg,#f7971e,#ffd200);}
+    .unit-card:nth-child(4) { background: linear-gradient(90deg,#fccb90,#d57eeb);}
+    .unit-card:nth-child(5) { background: linear-gradient(90deg,#43cea2,#185a9d); color:#fff;}
+    .unit-card:nth-child(6) { background: linear-gradient(90deg,#a6c0fe,#f68084);}
+    .unit-card:nth-child(7) { background: linear-gradient(90deg,#89f7fe,#66a6ff);}
+    .unit-card:nth-child(8) { background: linear-gradient(90deg,#f9d423,#ff4e50); color:#fff;}
+    .resources-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #ed7e7c 0%, #fad0c4 100%);
+      color: #444;
+      border: none;
+      border-radius: 22px;
+      padding: 10px 30px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin: 10px 0 0 0;
+      margin-right:10px;
+      transition: background 350ms;
+      text-decoration: none;
+      box-shadow: 0 2px 10px #fbc2eb55;
+    }
+    .resources-btn:hover {
+      background: linear-gradient(90deg, #fad0c4 0%, #ed7e7c 100%);
+      color: #2193b0;
+    }
+    .exam-timetable-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 2rem 0 1rem 0;
+      background: linear-gradient(90deg, #d57eeb33 0%, #fccb9033 100%);
+      box-shadow: 0 2px 8px #fdc2eb33;
+      border-radius: 8px;
+      overflow: hidden;
+    }
+    .exam-timetable-table th, .exam-timetable-table td {
+      border: 1px solid #ed7e7c33;
+      padding: 12px 10px;
+      text-align: center;
+      font-size: 1.08rem;
+    }
+    .exam-timetable-table th {
+      background: #ed7e7c;
+      color: #fff;
+      font-size: 1.07rem;
+      letter-spacing: 0.5px;
+    }
+    .exam-timetable-table tr:nth-child(even) {
+      background: #fbc2eb;
+    }
+    .exam-timetable-table tr:nth-child(odd) {
+      background: #b2fefa;
+    }
+    .exam-title {
+      color: #fff;
+      background: #ed7e7c;
+      border-radius: 6px;
+      padding:6px 12px;
+      display:inline-block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+    .streak {
+      display: flex;
+      align-items: center;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+      color: #52c234;
+    }
+    .emoji-fire {
+      font-size: 2rem;
+      margin-right: 10px;
+      filter: drop-shadow(2px 3px 2px #ffb347);
+    }
+    footer {
+      text-align: center;
+      color: #999;
+      margin: 4rem auto 1rem;
+      font-size: 1rem;
+    }
+    .designer {
+      color: #ed7e7c;
+      font-weight: bold;
+      margin-left: 7px;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Student Revision Hub</h1>
+    <p>Access revision materials, exam timetable, and keep your study streak burning!</p>
+  </header>
+
+  <div class="motivation">
+    🚀 <b>Let's Okoa Sem together!</b> Remember, every study session brings you closer to your goals. You’ve got this!
+  </div>
+
+  <section>
+    <h2>Semester Units & Revision Materials</h2>
+    
+    <div class="unit-card">
+      <h3>Engineering Research Methods</h3>
+      <a href="PASTE_ENGINEERING_RESEARCH_NOTES_LINK_HERE" target="_blank" class="resources-btn">Download Notes (PDF)</a>
+      <a href="PASTE_ENGINEERING_RESEARCH_REVISION_LINK_HERE" target="_blank" class="resources-btn">Revision Paper</a>
+    </div>
+    <div class="unit-card">
+      <h3>Robotics I</h3>
+      <a href="PASTE_ROBOTICS_NOTES_LINK_HERE" target="_blank" class="resources-btn">Download Notes (PDF)</a>
+      <a href="PASTE_ROBOTICS_REVISION_LINK_HERE" target="_blank" class="resources-btn">Revision Paper</a>
+    </div>
+    <div class="unit-card">
+      <h3>Electrical Motors II</h3>
+      <a href="https://drive.google.com/drive/folders/1UoGcepIolcWqC3ivtlzEajE9fixXLt6a?usp=drive_link" target="_blank" class="resources-btn">Download Notes (PDF)</a>
+      <a href="https://drive.google.com/drive/folders/1UoGcepIolcWqC3ivtlzEajE9fixXLt6a?usp=drive_link" target="_blank" class="resources-btn">Revision Paper</a>
+    </div>
+    <div class="unit-card">
+      <h3>Power Generation</h3>
+      <a href="PASTE_POWER_GEN_NOTES_LINK_HERE" target="_blank" class="resources-btn">Download Notes (PDF)</a>
+      <a href="PASTE_POWER_GEN_REVISION_LINK_HERE" target="_blank" class="resources-btn">Revision Paper</a>
+    </div>
+    <div class="unit-card">
+      <h3>Microprocessors I</h3>
+      <a href="file:///C:/Users/ELITEBOOK%20820%20G3/OneDrive/Desktop/YR%204%20SEM1/Microprocessors%20and%20Interfacing%20-%20D.A.Godse%20and%20A.P.Godse.pdf" target="_blank" class="resources-btn">Download Notes (PDF)</a>
+      <a href="PASTE_MICROPROCESSORS_REVISION_LINK_HERE" target="_blank" class="resources-btn">Revision Paper</a>
+    </div>
+    <div class="unit-card">
+      <h3>Wireless and Mobile Communication I</h3>
+      <a href="PASTE_WIRELESS_NOTES_LINK_HERE" target="_blank" class="resources-btn">Download Notes (PDF)</a>
+      <a href="PASTE_WIRELESS_REVISION_LINK_HERE" target="_blank" class="resources-btn">Revision Paper</a>
+    </div>
+    <div class="unit-card">
+      <h3>Fourier Analysis</h3>
+      <a href="PASTE_FOURIER_NOTES_LINK_HERE" target="_blank" class="resources-btn">Download Notes (PDF)</a>
+      <a href="PASTE_FOURIER_REVISION_LINK_HERE" target="_blank" class="resources-btn">Revision Paper</a>
+    </div>
+    <div class="unit-card">
+      <h3>Partial Differential Equations I</h3>
+      <a href="PASTE_PARTIAL_DIFF_NOTES_LINK_HERE" target="_blank" class="resources-btn">Download Notes (PDF)</a>
+      <a href="PASTE_PARTIAL_DIFF_REVISION_LINK_HERE" target="_blank" class="resources-btn">Revision Paper</a>
+    </div>
+    
+    <button class="resources-btn" onclick="alert('Visit your LMS or Google Drive for more resources and updates!')">
+      How to Access All Revision Materials
+    </button>
+
+    <div style="margin-top:2rem;">
+      <span class="exam-title">Exam Timetable</span>
+      <table class="exam-timetable-table">
+        <tr>
+          <th>Monday</th>
+          <th>Tuesday</th>
+          <th>Wednesday</th>
+          <th>Thursday</th>
+          <th>Friday</th>
+        </tr>
+        <tr>
+          <!-- First row: 08/12/2025 (Mon), 09/12/2025 (Tue), 10/12/2025 (Wed), 11/12/2025 (Thu), 12/12/2025 (Fri) -->
+          <td>
+            <div>Fourier Analysis</div>
+            <div>SGT 1</div>
+            <div>11:30 AM – 1:30 PM</div>
+            <hr style="margin:5px 0;">
+            <div>Engineering Research Methods</div>
+            <div>SRP 203</div>
+            <div>2:30 PM – 4:30 PM</div>
+          </td>
+          <td>
+            <div>Robotics I</div>
+            <div>SRP 201</div>
+            <div>8:30 AM – 10:30 AM</div>
+          </td>
+          <td>
+            <div>Microprocessors I</div>
+            <div>SRP 203</div>
+            <div>2:30 PM – 4:30 PM</div>
+          </td>
+          <td>
+            <div>Wireless and Mobile Communication I</div>
+            <div>SRP 203</div>
+            <div>2:30 PM – 4:30 PM</div>
+          </td>
+          <td>
+            <span style="font-size:1.2rem;">-</span>
+          </td>
+        </tr>
+        <tr>
+          <!-- Second row: 15/12/2025 (Mon), 16/12/2025 (Tue), 17/12/2025 (Wed), 18/12/2025 (Thu), 19/12/2025 (Fri) -->
+          <td>
+            <div>Power Generation</div>
+            <div>SRP 201</div>
+            <div>8:30 AM – 10:30 AM</div>
+          </td>
+          <td>
+            <div>Electrical Motors II</div>
+            <div>SRP 203</div>
+            <div>2:30 PM – 4:30 PM</div>
+          </td>
+          <td>
+            <div>Partial Differential Equations I</div>
+            <div>S502 / S503 / S504</div>
+            <div>8:30 AM – 10:30 AM</div>
+          </td>
+          <td>
+            <span style="font-size:1.2rem;">-</span>
+          </td>
+          <td>
+            <span style="font-size:1.2rem;">-</span>
+          </td>
+        </tr>
+      </table>
+      <a href="PASTE_EXAM_TIMETABLE_PDF_LINK_HERE" target="_blank" class="resources-btn">Download Timetable (PDF)</a>
+    </div>
+    
+    <div class="streak">
+      <span class="emoji-fire">🔥</span>
+      <span>Your Study Streak: <span id="streak-count">4</span> days in a row!</span>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 Student Revision Hub
+    <span class="designer">| Designed by Chemutai</span>
+  </footer>
+
+  <script>
+    let streak = localStorage.getItem('studyStreak') || 4;
+    document.getElementById('streak-count').textContent = streak;
+    // You can expand this with actual tracking logic!
+  </script>
+</body>
+</html>
